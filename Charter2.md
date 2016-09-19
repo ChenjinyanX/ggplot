@@ -17,6 +17,15 @@ This means that the following code is identical to the example above:
     '''ggplot(mpg, aes**(displ, hwy)**) + geom_point()'''
 
 ### Colour, size, shape and other aesthetic attributes
-- aes(displ, hwy, colour = class)
+#### ggplot2 takes care of the details of converting data (e.g., ‘f’, ‘r’, ‘4’) into aesthetics (e.g., ‘red’, ‘yellow’, ‘green’) with a **scale**
+- gives each point a unique colour corresponding to its class:aes(displ, hwy, colour = class)  
 - aes(displ, hwy, shape = drv)
 - aes(displ, hwy, size = cyl)
+#### set an aesthetic to a fixed value, without scaling it
+- the value “blue” is scaled to a pinkish colour, and a legend
+is added:ggplot(mpg, aes(displ, hwy)) + geom_point(aes(colour = "blue"))
+-  the points are given the R colour blue:ggplot(mpg, aes(displ, hwy)) + geom_point(colour = "blue")
+#### colour and shape work well with categorical variables, while size works well for continuous variables
+####  if there is a lot of data it can be hard to distinguish different groups. An alternative solution is to use facetting.
+
+# leading the reader from ignorance to knowledge.
