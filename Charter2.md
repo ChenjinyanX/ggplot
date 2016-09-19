@@ -5,7 +5,7 @@
 - A set of **aesthetic** mappings between variables in the data and visual properties, and
 - At least one layer which describes how to render each observation. Layers are usually created with a **geom function**.
 
-'''ggplot(mpg, aes(x = displ, y = hwy)) +geom_point() '''
+ggplot(mpg, aes(x = displ, y = hwy)) +geom_point() 
 - **Data**: mpg.
 - **Aesthetic mapping**: engine size mapped to x position, fuel economy to y position.
 - **Layer**: points.
@@ -14,7 +14,7 @@
 
 ### the first two unnamed arguments to aes() will be mapped to x and y. 
 This means that the following code is identical to the example above:
-    '''ggplot(mpg, aes**(displ, hwy)**) + geom_point()'''
+   ggplot(mpg, aes**(displ, hwy)**) + geom_point()
 
 ### Colour, size, shape and other aesthetic attributes
 #### ggplot2 takes care of the details of converting data (e.g., ‘f’, ‘r’, ‘4’) into aesthetics (e.g., ‘red’, ‘yellow’, ‘green’) with a **scale**
